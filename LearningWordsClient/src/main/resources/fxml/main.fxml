@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPanel" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.jesus.learningwords.controller.MainController">
+   <left>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" prefWidth="150.0" text="Words">
+               <content>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNew" text="New" />
+                        <Button disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Search" />
+                        <Button disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="View" />
+                     </children>
+                  </VBox>
+               </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Dictionary">
+               <content>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onViewDictionary" text="View" />
+                     </children>
+                  </VBox>
+               </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Quiz">
+               <content>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Button disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Start New" />
+                     </children>
+                  </VBox>
+               </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

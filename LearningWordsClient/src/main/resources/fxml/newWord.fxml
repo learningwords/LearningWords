@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints halignment="RIGHT" />
+    <ColumnConstraints halignment="RIGHT" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+  </rowConstraints>
+   <children>
+      <TextField GridPane.columnIndex="1" />
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="English" />
+      <Label text="Spanish" GridPane.rowIndex="1" />
+   </children>
+</GridPane>

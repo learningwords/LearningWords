@@ -1,0 +1,18 @@
+group 'es.jesus'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '2.19'
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.19'
+//    compile group: 'com.google.inject', name: 'guice', version: '4.0'
+}

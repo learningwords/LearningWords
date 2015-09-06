@@ -1,0 +1,28 @@
+package es.jesus.learningwords.web;
+
+import es.jesus.learningwords.domain.Word;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by jesus on 27/08/15.
+ */
+@RestController
+public class LoginController {
+
+    /**
+     * Request was able to reach this code through Spring Security
+     * therefore, the login was success
+     *
+     * @param session
+     * @return "ok"
+     */
+    @RequestMapping("/login")
+    public String greeting(HttpSession session) {
+        return "ok";
+    }
+}

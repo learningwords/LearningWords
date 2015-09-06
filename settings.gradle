@@ -1,0 +1,4 @@
+rootProject.name = 'LearningWords'
+include 'LearningWordsWs'
+include 'LearningWordsClient'
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="142.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="68.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jesus Hernandez Morant" wrappingWidth="148.28271484375" />
+      <Text layoutX="115.0" layoutY="112.0" stroke="#deff05" strokeType="OUTSIDE" text="2015">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00f529" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Text layoutX="18.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © All the fucking rights reserved" wrappingWidth="246.28271484375" />
+   </children>
+</Pane>
