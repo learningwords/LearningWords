@@ -28,7 +28,7 @@ public class WordsService {
         word.setTextFrom("hello");
         word.setTextTo("hola");
         word.setLearnedOn(Calendar.getInstance());
-        RestService.getInstance().save("", "", word);
+        RestService.getInstance().save("jesus", "jesus", word);
 
     }
 

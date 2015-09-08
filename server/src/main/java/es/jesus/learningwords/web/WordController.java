@@ -5,6 +5,8 @@ import es.jesus.learningwords.repository.WordRepository;
 import es.jesus.learningwords.service.WordService;
 import es.jesus.learningwords.shared.vo.WordVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,8 +25,8 @@ public class WordController {
     @Autowired
     private WordService wordService;
 
-    @RequestMapping(value = "/save" , method = RequestMethod.PUT)
-    public boolean save(WordVO word) {
+    @RequestMapping(value = "/save", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public boolean save(@RequestBody WordVO word) {
         wordService.saveWord(word);
         return true;
     }

@@ -8,7 +8,9 @@ import org.glassfish.jersey.jackson.JacksonFeature;
 import javax.ws.rs.NotAuthorizedException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 /**
  * Created by jesus on 27/08/15.
@@ -53,18 +55,14 @@ public class RestService {
     }
 
     public boolean save(String username, String password, WordVO word) {
-//        Client client = ClientBuilder.newClient(clientConfig);
-//        client.register(HttpAuthenticationFeature.basic(username, password));
-//
-//
-//        String result = null;
-//
-//        result = client.target("http://localhost:8080")
-//                .path("save")
-//                .request(MediaType.WILDCARD_TYPE)
-//
-//        return false;
-//
+        Client client = ClientBuilder.newClient(clientConfig);
+        client.register(HttpAuthenticationFeature.basic(username, password));
+
+        Response result = client.target("http://localhost:8080")
+                .path("save")
+                .request(MediaType.WILDCARD_TYPE)
+                .post(Entity.json(word));
+    // TODO use result
         return true;
     }
 }
