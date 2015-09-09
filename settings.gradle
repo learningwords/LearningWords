@@ -1,6 +1,4 @@
 rootProject.name = 'LearningWords'
-include 'shared'
-include 'server'
-include 'client'
+include 'shared', 'server', 'client'
 
 

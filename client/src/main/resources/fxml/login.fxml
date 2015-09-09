@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-
 
 <StackPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.jesus.learningwords.controller.LoginController">
    <children>
@@ -21,7 +21,14 @@
           <children>
               <Label text="Username" />
               <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-              <Button mnemonicParsing="false" onAction="#log" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <Button mnemonicParsing="false" onAction="#log" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitWidth="20.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/key.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
               <Label text="Password" GridPane.rowIndex="1" />
               <TextField fx:id="username" GridPane.columnIndex="1" />
           </children>

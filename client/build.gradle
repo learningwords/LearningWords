@@ -1,6 +1,3 @@
-group 'es.jesus'
-version '1.0-SNAPSHOT'
-
 apply plugin: 'java'
 
 sourceCompatibility = 1.8
@@ -8,6 +5,10 @@ targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+jar {
+    baseName "LearningWords"
 }
 
 dependencies {
