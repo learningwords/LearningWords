@@ -3,6 +3,7 @@ package es.jesus.learningwords.shared.vo;
 import java.util.Calendar;
 
 /**
+ *
  * Created by jesus on 19/07/15.
  */
 
@@ -12,8 +13,6 @@ public class WordVO {
     private String textFrom;
     private String textTo;
     private Calendar learnedOn;
-
-
 
      /*
      * Getters and Setters

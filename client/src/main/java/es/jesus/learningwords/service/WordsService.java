@@ -3,9 +3,11 @@ package es.jesus.learningwords.service;
 
 import es.jesus.learningwords.shared.vo.WordVO;
 
+import javax.ws.rs.core.MediaType;
 import java.util.Calendar;
 
 /**
+ *
  * Created by jesus on 23/07/15.
  */
 public class WordsService {
@@ -25,11 +27,17 @@ public class WordsService {
 
     public static void save() {
         WordVO word = new WordVO();
-        word.setTextFrom("hello");
-        word.setTextTo("hola");
+        word.setTextFrom("test");
+        word.setTextTo("test");
         word.setLearnedOn(Calendar.getInstance());
-        RestService.getInstance().save("jesus", "jesus", word);
+        RestClientFactory.create().put(new RestClientFactory.RestRequest() {
+            {
+                path = "save";
+                parameter = word;
+                mediaType = MediaType.WILDCARD_TYPE;
 
+            }
+        });
     }
 
 }

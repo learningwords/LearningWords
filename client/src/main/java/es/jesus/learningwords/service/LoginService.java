@@ -20,10 +20,7 @@ public class LoginService {
 
 
     public boolean login(String username, String password) {
-        if (RestService.getInstance().login(username, password)) {
-            return Boolean.TRUE;
-        }
-        return Boolean.FALSE;
+        return RestClientFactory.authenticate(username, password);
     }
 
 
