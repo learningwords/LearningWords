@@ -1,8 +1,8 @@
-group 'es.jesus'
-version '1.0-SNAPSHOT'
 
-
-
+allprojects {
+    group 'es.jesus'
+    version '1.0-SNAPSHOT'
+}
 repositories {
     mavenCentral()
 }
