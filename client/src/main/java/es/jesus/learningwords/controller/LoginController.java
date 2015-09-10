@@ -32,7 +32,7 @@ public class LoginController {
      * Logging button has been pressed
      */
     @FXML
-    protected void log() {
+    protected void onLog() {
         if (RestClientFactory.authenticate(username.getText(), password.getText())) {
             ApplicationRun.goTo("/fxml/main.fxml");
         } else {
