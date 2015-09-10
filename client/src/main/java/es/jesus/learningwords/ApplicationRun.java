@@ -32,7 +32,9 @@ public class ApplicationRun extends Application {
         // Review the how to switch between different fxml pages
         Parent myPane = null;
         try {
-            myPane = FXMLLoader.load(ApplicationRun.class.getResource(fxml));
+            FXMLLoader loader = new FXMLLoader(ApplicationRun.class.getResource(fxml));
+            myPane = loader.load();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

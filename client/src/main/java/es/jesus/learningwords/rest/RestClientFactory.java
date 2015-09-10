@@ -1,4 +1,4 @@
-package es.jesus.learningwords.service;
+package es.jesus.learningwords.rest;
 
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
@@ -47,10 +47,16 @@ public class RestClientFactory {
     }
 
     public static class RestRequest<T> {
-        public String path;
-        public T parameter;
-        public MediaType mediaType;
+        private String path;
+        private T parameter;
+        private MediaType mediaType;
         //public Class<T> responseType;
+
+        public RestRequest(String path, MediaType mediaType, T parameter) {
+            this.path = path;
+            this.parameter = parameter;
+            this.mediaType = mediaType;
+        }
     }
 
     public static RestClient create() {

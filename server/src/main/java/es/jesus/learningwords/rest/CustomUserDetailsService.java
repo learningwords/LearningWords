@@ -1,6 +1,5 @@
-package es.jesus.learningwords.service;
+package es.jesus.learningwords.rest;
 
-import es.jesus.learningwords.repository.LanguageRepository;
 import es.jesus.learningwords.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

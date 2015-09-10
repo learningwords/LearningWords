@@ -1,14 +1,16 @@
 package es.jesus.learningwords.controller;
 
 import es.jesus.learningwords.ApplicationRun;
-import es.jesus.learningwords.service.LoginService;
+import es.jesus.learningwords.rest.RestClientFactory;
 import javafx.animation.FadeTransition;
-import javafx.animation.FillTransition;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
@@ -31,7 +33,7 @@ public class LoginController {
      */
     @FXML
     protected void log() {
-        if (LoginService.getInstance().login(username.getText(), password.getText())) {
+        if (RestClientFactory.authenticate(username.getText(), password.getText())) {
             ApplicationRun.goTo("/fxml/main.fxml");
         } else {
 

@@ -14,6 +14,18 @@ public class WordVO {
     private String textTo;
     private Calendar learnedOn;
 
+    /**
+     * Empty constructor needed by jackson
+     */
+    public WordVO() {
+    }
+
+    public WordVO(String textFrom, String textTo, Calendar learnedOn) {
+        this.textFrom = textFrom;
+        this.textTo = textTo;
+        this.learnedOn = learnedOn;
+    }
+
      /*
      * Getters and Setters
      */
