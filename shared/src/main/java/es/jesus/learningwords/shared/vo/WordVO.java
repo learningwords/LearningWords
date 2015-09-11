@@ -1,18 +1,23 @@
 package es.jesus.learningwords.shared.vo;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Calendar;
 
 /**
- *
  * Created by jesus on 19/07/15.
  */
 
 public class WordVO {
 
+    private static DateFormat sfd = new SimpleDateFormat("dd-MM-yyyy");
+
 
     private String textFrom;
     private String textTo;
     private Calendar learnedOn;
+    private String learnedOnFmt;
 
     /**
      * Empty constructor needed by jackson
@@ -24,6 +29,7 @@ public class WordVO {
         this.textFrom = textFrom;
         this.textTo = textTo;
         this.learnedOn = learnedOn;
+        this.learnedOnFmt = sfd.format(learnedOn.getTime());
     }
 
      /*
@@ -52,5 +58,9 @@ public class WordVO {
 
     public void setLearnedOn(Calendar learnedOn) {
         this.learnedOn = learnedOn;
+    }
+
+    public String getLearnedOnFmt() {
+        return learnedOnFmt;
     }
 }

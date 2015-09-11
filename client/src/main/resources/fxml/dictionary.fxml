@@ -5,26 +5,23 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.cell.*?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="es.jesus.learningwords.controller.DictionaryController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.jesus.learningwords.controller.DictionaryController">
     <children>
-        <TableView fx:id="wordsTable" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                   AnchorPane.rightAnchor="-0.7864051999999901" AnchorPane.topAnchor="0.0">
+        <TableView fx:id="wordsTable" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <columns>
-                <TableColumn prefWidth="75.0" text="English">
+                <TableColumn text="English">
                     <cellValueFactory>
-                        <PropertyValueFactory property="textFrom"/>
+                        <PropertyValueFactory property="textFrom" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn prefWidth="75.0" text="Spanish">
+                <TableColumn text="Spanish">
                     <cellValueFactory>
-                        <PropertyValueFactory property="textTo"/>
+                        <PropertyValueFactory property="textTo" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn prefWidth="75.0" text="Learned On">
+                <TableColumn text="Learned On">
                     <cellValueFactory>
-                        <PropertyValueFactory property="learnedOn"/>
+                        <PropertyValueFactory property="learnedOnFmt" />
                     </cellValueFactory>
                 </TableColumn>
             </columns>
