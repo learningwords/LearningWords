@@ -1,6 +1,7 @@
 package es.jesus.learningwords.controller;
 
 import es.jesus.learningwords.rest.RestClientFactory;
+import es.jesus.learningwords.rest.RestRequest;
 import es.jesus.learningwords.shared.vo.WordVO;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
@@ -23,7 +24,7 @@ public class NewWordController {
     @FXML
     protected DatePicker learnedOn;
 
-    public void initialize(){
+    public void initialize() {
         learnedOn.setValue(LocalDate.now());
     }
 
@@ -38,8 +39,8 @@ public class NewWordController {
                 textTo.getText(),
                 learnedOnCal
         );
-        RestClientFactory.create().put(new RestClientFactory.RestRequest<>(
-                "save",
+        RestClientFactory.create().put(new RestRequest<>(
+                "word/save",
                 MediaType.WILDCARD_TYPE,
                 word
         ));
