@@ -33,31 +33,18 @@ public class RestClientFactory {
         }
 
         public Response put(RestRequest request) {
-            return webTarget.path(request.path)
-                    .request(request.mediaType)
-                    .post(Entity.json(request.parameter));
+            return webTarget.path(request.getPath())
+                    .request(request.getMediaType())
+                    .post(Entity.json(request.getParameter()));
         }
 
-//        public <T> T get(RestRequest request) {
-//            return (T) webTarget.path(request.path)
-//                    .request(request.mediaType)
-//                    .get(request.responseType);
-//        }
-
-    }
-
-    public static class RestRequest<T> {
-        private String path;
-        private T parameter;
-        private MediaType mediaType;
-        //public Class<T> responseType;
-
-        public RestRequest(String path, MediaType mediaType, T parameter) {
-            this.path = path;
-            this.parameter = parameter;
-            this.mediaType = mediaType;
+        public <T> T get(RestRequest<T> request) {
+            return webTarget.path(request.getPath())
+                    .request(request.getMediaType())
+                    .get(request.getGenericType());
         }
     }
+
 
     public static RestClient create() {
         return new RestClient(
