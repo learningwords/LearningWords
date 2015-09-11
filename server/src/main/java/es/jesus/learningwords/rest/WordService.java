@@ -10,8 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.Calendar;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -26,7 +27,7 @@ public class WordService {
     @Autowired
     private WordRepository wordRepository;
 
-    public void saveWord(WordVO wordVO){
+    public void saveWord(WordVO wordVO) {
         //initialize the database Word
         //TODO use dozer or similar
         //TODO Configure cache
@@ -40,5 +41,13 @@ public class WordService {
         word.setTextTo(wordVO.getTextTo());
         //Save
         wordRepository.save(word);
+    }
+
+    public List<WordVO> listUserWords() {
+        return wordRepository
+                .findByUser((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal())
+                .stream()
+                .map(word -> new WordVO(word.getTextFrom(), word.getTextTo(), word.getLearnedOn()))
+                .collect(Collectors.toList());
     }
 }

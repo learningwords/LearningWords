@@ -1,13 +1,10 @@
 package es.jesus.learningwords.domain;
 
-import org.apache.tomcat.jni.Local;
-
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Calendar;
 
 /**
+ *
  * Created by jesus on 19/07/15.
  */
 @Entity

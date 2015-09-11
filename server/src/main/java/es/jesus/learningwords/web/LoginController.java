@@ -1,14 +1,12 @@
 package es.jesus.learningwords.web;
 
-import es.jesus.learningwords.domain.Word;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
+ *
  * Created by jesus on 27/08/15.
  */
 @RestController
