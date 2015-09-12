@@ -19,6 +19,9 @@ public class Word {
     @ManyToOne
     private Language languageTo;
 
+    @ManyToOne
+    private WordType wordType;
+
     private String textFrom;
     private String textTo;
 
