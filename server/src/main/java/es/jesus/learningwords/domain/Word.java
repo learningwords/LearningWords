@@ -101,4 +101,12 @@ public class Word {
     public void setCreatedOn(Calendar createdOn) {
         this.createdOn = createdOn;
     }
+
+    public WordType getWordType() {
+        return wordType;
+    }
+
+    public void setWordType(WordType wordType) {
+        this.wordType = wordType;
+    }
 }

@@ -26,11 +26,12 @@ public class WordVO {
     public WordVO() {
     }
 
-    public WordVO(String textFrom, String textTo, Calendar learnedOn) {
+    public WordVO(String textFrom, String textTo, Calendar learnedOn, WordTypeVO wordType) {
         this.textFrom = textFrom;
         this.textTo = textTo;
         this.learnedOn = learnedOn;
         this.learnedOnFmt = sfd.format(learnedOn.getTime());
+        this.wordType = wordType;
     }
 
      /*

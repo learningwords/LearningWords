@@ -40,6 +40,7 @@ public class WordService {
         word.setCreatedOn(Calendar.getInstance());
         word.setTextFrom(wordVO.getTextFrom());
         word.setTextTo(wordVO.getTextTo());
+        word.setWordType(wordTypeRepository.findByCode(wordVO.getWordType().getCode()));
         //Save
         wordRepository.save(word);
     }
@@ -48,7 +49,8 @@ public class WordService {
         return wordRepository
                 .findByUser((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal())
                 .stream()
-                .map(word -> new WordVO(word.getTextFrom(), word.getTextTo(), word.getLearnedOn()))
+                .map(word -> new WordVO(word.getTextFrom(), word.getTextTo(), word.getLearnedOn(),
+                        new WordTypeVO( word.getWordType().getCode(), word.getWordType().getName())))
                 .collect(Collectors.toList());
     }
 

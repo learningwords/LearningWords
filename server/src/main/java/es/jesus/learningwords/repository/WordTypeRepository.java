@@ -9,5 +9,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface WordTypeRepository extends CrudRepository<WordType, Long> {
 
+    WordType findByCode(String code);
 
 }
