@@ -34,6 +34,6 @@
       <Label text="Learned on" GridPane.rowIndex="2" />
       <DatePicker fx:id="learnedOn" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Label text="Word Type" GridPane.rowIndex="3" />
-      <ComboBox prefHeight="25.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <ComboBox fx:id="wordType" prefHeight="25.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
    </children>
 </GridPane>
