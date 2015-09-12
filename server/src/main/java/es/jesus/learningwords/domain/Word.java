@@ -19,6 +19,9 @@ public class Word {
     @ManyToOne
     private Language languageTo;
 
+    @ManyToOne
+    private WordType wordType;
+
     private String textFrom;
     private String textTo;
 
@@ -97,5 +100,13 @@ public class Word {
 
     public void setCreatedOn(Calendar createdOn) {
         this.createdOn = createdOn;
+    }
+
+    public WordType getWordType() {
+        return wordType;
+    }
+
+    public void setWordType(WordType wordType) {
+        this.wordType = wordType;
     }
 }

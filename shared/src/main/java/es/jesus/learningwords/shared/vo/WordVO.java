@@ -18,6 +18,7 @@ public class WordVO {
     private String textTo;
     private Calendar learnedOn;
     private String learnedOnFmt;
+    private WordTypeVO wordType;
 
     /**
      * Empty constructor needed by jackson
@@ -25,11 +26,12 @@ public class WordVO {
     public WordVO() {
     }
 
-    public WordVO(String textFrom, String textTo, Calendar learnedOn) {
+    public WordVO(String textFrom, String textTo, Calendar learnedOn, WordTypeVO wordType) {
         this.textFrom = textFrom;
         this.textTo = textTo;
         this.learnedOn = learnedOn;
         this.learnedOnFmt = sfd.format(learnedOn.getTime());
+        this.wordType = wordType;
     }
 
      /*
@@ -62,5 +64,13 @@ public class WordVO {
 
     public String getLearnedOnFmt() {
         return learnedOnFmt;
+    }
+
+    public WordTypeVO getWordType() {
+        return wordType;
+    }
+
+    public void setWordType(WordTypeVO wordType) {
+        this.wordType = wordType;
     }
 }

@@ -20,6 +20,8 @@
           </rowConstraints>
           <children>
               <Label text="Username" />
+              <TextField fx:id="username" onAction="#onLog" GridPane.columnIndex="1" />
+              <Label text="Password" GridPane.rowIndex="1" />
               <PasswordField fx:id="password" onAction="#onLog" GridPane.columnIndex="1" GridPane.rowIndex="1" />
               <Button mnemonicParsing="false" onAction="#onLog" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <graphic>
@@ -29,8 +31,6 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-              <Label text="Password" GridPane.rowIndex="1" />
-              <TextField fx:id="username" onAction="#onLog" GridPane.columnIndex="1" />
           </children>
          <padding>
             <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />

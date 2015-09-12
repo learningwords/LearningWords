@@ -1,6 +1,7 @@
 package es.jesus.learningwords.web;
 
 import es.jesus.learningwords.rest.WordService;
+import es.jesus.learningwords.shared.vo.WordTypeVO;
 import es.jesus.learningwords.shared.vo.WordVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -35,6 +36,11 @@ public class WordController {
     @RequestMapping(value = "/list", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<WordVO> list() {
         return wordService.listUserWords();
+    }
+
+    @RequestMapping(value = "/listTypes", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<WordTypeVO> listTypes() {
+        return wordService.listWordTypes();
     }
 
 }
