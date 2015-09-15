@@ -13,9 +13,6 @@ import javafx.scene.control.TextField;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -47,14 +44,11 @@ public class NewWordController {
 
     @FXML
     protected void onSave() {
-        Date date = Date.from(learnedOn.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
-        Calendar learnedOnCal = Calendar.getInstance();
-        learnedOnCal.setTime(date);
 
         WordVO word = new WordVO(
                 textFrom.getText(),
                 textTo.getText(),
-                learnedOnCal,
+                learnedOn.getValue(),
                 wordType.getValue()
         );
         RestClientFactory.create().put(new RestRequest<>(

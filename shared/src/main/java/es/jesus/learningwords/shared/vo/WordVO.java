@@ -3,7 +3,6 @@ package es.jesus.learningwords.shared.vo;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Calendar;
 
 /**
  * Created by jesus on 19/07/15.
@@ -16,8 +15,7 @@ public class WordVO {
 
     private String textFrom;
     private String textTo;
-    private Calendar learnedOn;
-    private String learnedOnFmt;
+    private LocalDate learnedOn;
     private WordTypeVO wordType;
 
     /**
@@ -26,11 +24,10 @@ public class WordVO {
     public WordVO() {
     }
 
-    public WordVO(String textFrom, String textTo, Calendar learnedOn, WordTypeVO wordType) {
+    public WordVO(String textFrom, String textTo, LocalDate learnedOn, WordTypeVO wordType) {
         this.textFrom = textFrom;
         this.textTo = textTo;
         this.learnedOn = learnedOn;
-        this.learnedOnFmt = sfd.format(learnedOn.getTime());
         this.wordType = wordType;
     }
 
@@ -54,16 +51,12 @@ public class WordVO {
         this.textTo = textTo;
     }
 
-    public Calendar getLearnedOn() {
+    public LocalDate getLearnedOn() {
         return learnedOn;
     }
 
-    public void setLearnedOn(Calendar learnedOn) {
+    public void setLearnedOn(LocalDate learnedOn) {
         this.learnedOn = learnedOn;
-    }
-
-    public String getLearnedOnFmt() {
-        return learnedOnFmt;
     }
 
     public WordTypeVO getWordType() {

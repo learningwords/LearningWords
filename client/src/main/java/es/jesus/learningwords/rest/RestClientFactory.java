@@ -22,7 +22,8 @@ public class RestClientFactory {
 
     static {
         clientConfig = new ClientConfig()
-                .register(JacksonFeature.class);
+                .register(JacksonFeature.class)
+                .register(Jsr310MapperContextResolver.class);
     }
 
     public static class RestClient {

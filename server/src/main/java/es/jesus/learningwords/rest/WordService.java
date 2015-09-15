@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -37,7 +38,7 @@ public class WordService {
         word.setLanguageTo(languageRepository.findByCode("ES"));
         word.setUser((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal());
         word.setLearnedOn(wordVO.getLearnedOn());
-        word.setCreatedOn(Calendar.getInstance());
+        word.setCreatedOn(LocalDateTime.now());
         word.setTextFrom(wordVO.getTextFrom());
         word.setTextTo(wordVO.getTextTo());
         word.setWordType(wordTypeRepository.findByCode(wordVO.getWordType().getCode()));
