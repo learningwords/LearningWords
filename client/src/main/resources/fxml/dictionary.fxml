@@ -28,7 +28,7 @@
                 </TableColumn>
                 <TableColumn text="Learned On">
                     <cellValueFactory>
-                        <PropertyValueFactory property="learnedOnFmt"/>
+                        <PropertyValueFactory property="learnedOn"/>
                     </cellValueFactory>
                 </TableColumn>
             </columns>

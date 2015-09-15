@@ -3,10 +3,7 @@ package es.jesus.learningwords.domain;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -15,9 +12,10 @@ import java.util.Collection;
  * Created by jesus on 24/07/15.
  */
 @Entity
+@Table(name = "user")
 public class User implements UserDetails {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
     private String name;

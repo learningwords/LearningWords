@@ -1,34 +1,39 @@
 package es.jesus.learningwords.domain;
 
 import javax.persistence.*;
-import java.util.Calendar;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
- *
  * Created by jesus on 19/07/15.
  */
 @Entity
+@Table(name = "word")
 public class Word {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne
+    @JoinColumn(name="language_from_id")
     private Language languageFrom;
     @ManyToOne
+    @JoinColumn(name="language_to_id")
     private Language languageTo;
 
     @ManyToOne
+    @JoinColumn(name="word_type_id")
     private WordType wordType;
 
+    @Column(name="text_from")
     private String textFrom;
+    @Column(name="text_to")
     private String textTo;
-
-    //TODO use LocalDate/LocalDateTime java 8 (failing with hibernate atm)
-    //Data truncation: Incorrect datetime value
-    private Calendar learnedOn;
-    private Calendar createdOn;
+    @Column(name="learned_on")
+    private LocalDate learnedOn;
+    @Column(name="created_on")
+    private LocalDateTime createdOn;
 
     @ManyToOne
     private User user;
@@ -86,19 +91,19 @@ public class Word {
         this.user = user;
     }
 
-    public Calendar getLearnedOn() {
+    public LocalDate getLearnedOn() {
         return learnedOn;
     }
 
-    public void setLearnedOn(Calendar learnedOn) {
+    public void setLearnedOn(LocalDate learnedOn) {
         this.learnedOn = learnedOn;
     }
 
-    public Calendar getCreatedOn() {
+    public LocalDateTime getCreatedOn() {
         return createdOn;
     }
 
-    public void setCreatedOn(Calendar createdOn) {
+    public void setCreatedOn(LocalDateTime createdOn) {
         this.createdOn = createdOn;
     }
 

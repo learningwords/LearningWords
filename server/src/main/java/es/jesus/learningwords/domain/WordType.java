@@ -8,10 +8,11 @@ import java.util.Calendar;
  * Created by jesus on 12/09/15.
  */
 @Entity
+@Table(name = "word_type")
 public class WordType {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String code;
     private String name;
