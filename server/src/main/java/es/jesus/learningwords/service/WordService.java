@@ -1,4 +1,4 @@
-package es.jesus.learningwords.rest;
+package es.jesus.learningwords.service;
 
 import es.jesus.learningwords.domain.User;
 import es.jesus.learningwords.domain.Word;
@@ -13,11 +13,12 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * Word Service
+ *
  * Created by jesus on 7/09/15.
  */
 @Service

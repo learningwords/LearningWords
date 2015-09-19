@@ -1,7 +1,7 @@
 package es.jesus.learningwords.controller;
 
-import es.jesus.learningwords.rest.RestClientFactory;
-import es.jesus.learningwords.rest.RestRequest;
+import es.jesus.learningwords.service.RestClientFactory;
+import es.jesus.learningwords.service.RestRequest;
 import es.jesus.learningwords.shared.vo.WordVO;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;

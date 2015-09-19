@@ -1,6 +1,6 @@
 package es.jesus.learningwords.web;
 
-import es.jesus.learningwords.rest.WordService;
+import es.jesus.learningwords.service.WordService;
 import es.jesus.learningwords.shared.vo.WordTypeVO;
 import es.jesus.learningwords.shared.vo.WordVO;
 import org.springframework.beans.factory.annotation.Autowired;

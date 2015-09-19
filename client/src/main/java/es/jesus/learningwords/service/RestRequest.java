@@ -1,4 +1,4 @@
-package es.jesus.learningwords.rest;
+package es.jesus.learningwords.service;
 
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
