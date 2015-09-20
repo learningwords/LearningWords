@@ -1,4 +1,4 @@
-package es.jesus.learningwords.rest;
+package es.jesus.learningwords.service;
 
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;

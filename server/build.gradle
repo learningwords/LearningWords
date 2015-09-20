@@ -37,7 +37,9 @@ dependencies {
     compile("org.hibernate:hibernate-entitymanager:5.0.1.Final")
     compile("org.hibernate:hibernate-core:5.0.1.Final")
     compile("org.hibernate:hibernate-java8:5.0.1.Final")
-    testCompile("junit:junit")
     compile project(':shared')
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("org.hsqldb:hsqldb")
 }
 

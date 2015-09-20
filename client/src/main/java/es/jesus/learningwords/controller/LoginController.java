@@ -1,7 +1,7 @@
 package es.jesus.learningwords.controller;
 
 import es.jesus.learningwords.ApplicationRun;
-import es.jesus.learningwords.rest.RestClientFactory;
+import es.jesus.learningwords.service.RestClientFactory;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
